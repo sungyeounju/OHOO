@@ -1,11 +1,66 @@
 @charset "utf-8";
 
+.icon{vertical-align: middle;}
+.icon svg{display: inline-block;vertical-align: middle;width:20px;margin-right:5px;} 
+.icon span{display:inline-block;vertical-align: middle;}
 
-.header{height:54px;width:100%;background:#484F61;}
-.topBar{height:60px;width:100%;box-shadow:0px 3px 9px rgb(0 0 0 / 11%);}
+/* header */
+.header{display: flex;justify-content: space-between;align-items: center;height:54px;width:100%;padding:0 27px;background:#484F61;}
+.header .logo .logotit{color:#fff;font-size:18px;}
+.header .logo .logotxt{color:#fff;font-size:18px;}
+.header .login{position: relative;}
+.header .login .profile{display: flex;align-items: center;justify-content: center; width:36px;height:36px;border-radius: 50%;background:#2D9CDB;color:#fff;font-size:18px;font-family:'Roboto', sans-serif;transition: all .5s;}
+.header .login .profile:hover,
+.header .login .profile:focus{background:#47B8F9;}
+.header .login .loginBox{display:none;position: absolute;right:0;top: 46px;width: 180px;height:88px;padding: 12px;background:#fff;border:1px solid #484F61;border-radius: 2px;}
+.header .login .loginBox li a{padding:5px 0;}
+
+/* topbar */
+.topbar{display: flex;align-items: center;height:60px;width:100%;box-shadow:0px 3px 9px rgb(0 0 0 / 11%);}
+.topbar .fileupload{width: 280px;text-align: center;}
+.topbar .fileupload a{width:230px;padding:5px 0;border-radius: 5px; border:1px solid #bdbdbd;background:#F1F2F3;}
+.topbar .fileupload a span{font-size:15px;}
+.topbar .filepath{width:calc(100% - 280px - 321px);padding: 0 20px 0 10px;}
+.topbar .filepath .pathbox{display: inline-block;width:100%;padding:0 5px;border:1px solid #bdbdbd;border-radius: 3px;}
+.topbar .filepath .pathbox li{display:inline-block;vertical-align: middle;}
+.topbar .filepath .pathbox li:after{display:inline-block;vertical-align: middle; content:'\005C';}
+.topbar .filepath .pathbox li:last-child:after{display:none;}
+.topbar .filepath .pathbox li a{padding:5px;font-size:15px;}
+.topbar .filepath .pathbox li a span{font-size:15px;}
+.topbar .filepath .pathbox li .icon svg{width:23px;}
+.topbar .search{position: relative;display: flex;width: 321px;padding: 0 30px 0 10px;}
+.topbar .search svg{position: absolute;left: 20px;top: 6px;}
+.topbar .search .searchbox{display: inline-block;width: 100%;height: 38px;padding: 0 15px 0 50px;border-radius: 2px;border:1px solid #bdbdbd;font-size: 15px;color: #333;}
+.topbar .search .searchbox::placeholder{color:#333;}
 
 .layout{height:calc(100vh - 114px);font-size:0;}
-.box{display: inline-block;height:100%;vertical-align: top;}
-.nav{width:280px;}
+.box{display: inline-block;height:100%;vertical-align: top;padding:20px 30px;}
+.nav{overflow-y: auto; width:280px;}
+.nav .floderbox{margin-bottom:20px;padding-bottom:20px; border-bottom:1px solid #E0E0E0;}
+.nav .floderbox ul li{margin:5px 0;}
+.nav .depth02{margin-left:24px;}
+.nav .depth03{margin-left:24px;}
+
+/* main */
 .main{height:100%;width:calc(100% - 280px - 321px);border-right:1px solid #bdbdbd;border-left:1px solid #bdbdbd;}
+.main .menubar{position: relative;padding-bottom:10px;border-bottom:1px solid #bdbdbd;}
+.main .menubar .editbtn{}
+.main .menubar .editbtn ul{font-size:0;}
+.main .menubar .editbtn ul li{display:inline-block;}
+.main .menubar .editbtn .icon{margin-right:5px;padding:5px 8px; border:1px solid #bdbdbd;border-radius: 2px;}
+.main .menubar .ascbtn{}
+.main .menubar .tagbtn{position: absolute;right:0;top:0;}
+.main .menubar .tagbtn .viewitem{margin-bottom:10px;}
+
+.main .contents{padding:20px;}
+.main .contents ul{font-size:0;}
+.main .contents ul li{display:inline-block;vertical-align: top;margin-right:27px;margin-bottom:60px;}
+.main .contents ul li:nth-child(7n){margin-right:0;}
+.main .contents ul li label{display:inline-block;width:100%;height:100%;}
+.main .contents ul li .item{position: relative; overflow: hidden; width:150px;height:150px;background:#F1F2F3;border:1px solid #e0e0e0;border-radius: 3px;}
+.main .contents ul li .item .boxitem{position: absolute;left:0;top:0;width:100%;height:100%;}
+.main .contents ul li .item .boxitem .checkbox{}
+.main .contents ul li .item .boxitem .starbox{position: absolute;right:10px;top:10px;}
+.main .contents ul li .item .boxitem .morebox{}
+.main .contents ul li .info{text-align: center;}
 .sidebar{height:100%;width:321px;}
